@@ -342,17 +342,16 @@ section {
 
 .event *{
     font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.897);
 }
 
 .event .event-name {
-    color: rgb(0, 0, 0);
     display: block;
     font-size: 30px;
     font-weight: 700;
 }
 
 .event .event-time {
-    color: black;
     display: block;
     margin-top: 5px !important;
     font-size: 20px;

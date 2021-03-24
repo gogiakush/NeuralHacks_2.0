@@ -94,9 +94,9 @@ header {
 #beginning #right {
     width: 50%;
     display: flex;
-    align-items: center;
     justify-content: center;
     height: 100%;
+    margin-top: 50px;
 }
 
 #coolpic {
@@ -405,4 +405,8 @@ section {
 
 #links li a:hover {
     color:rgb(184, 184, 184);
+}
+
+#coolicon {
+    margin-top: 50px;
 }

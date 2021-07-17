@@ -21,6 +21,59 @@ h1 {
     display: flex;
     flex-direction: row;
 }
+
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
 /*
 #colors div {
     height: 7px;
@@ -409,4 +462,122 @@ section {
 
 #coolicon {
     margin-top: 50px;
+}
+
+.bottom-links {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-top: 0;
+}
+
+.bottom-links li {
+    position: relative;
+    list-style: none;
+    margin: 0 40px 0 0;
+    cursor: pointer;
+} 
+
+.bottom-links li a {
+    text-decoration: none;
+}
+
+.bottom-links li a i {
+    font-size: 70px;
+    color: #222;
+}
+
+.bottom-links li a::before {
+    font-family: 'Font Awesome 5 Brands';
+    font-style: normal;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-size: 70px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.bottom-links li a:hover::before {
+    height: 110%;
+}
+
+.bottom-links li:nth-child(1) a::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f16d';
+    color: #E1306C;
+    border-bottom: 4px solid #E1306C;
+}
+
+.bottom-links li:nth-child(2) a::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f08c';
+    color: #2867B2;
+    border-bottom: 4px solid #2867B2;
+}
+
+.bottom-links li:nth-child(3) a::before {
+    font-family: 'Font Awesome 5 Brands';
+    content: '\f082';
+    color: #4267B2;
+    border-bottom: 4px solid #4267B2;
+}
+
+.bottom-links li:nth-child(4) a::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0e0';
+    color: #c4c4c4;
+    border-bottom: 4px solid #c4c4c4;
+}
+
+.l-sec {
+    width: 88%;
+    margin: 0 6%;
+}
+
+.links-section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.links-section .b-left {
+    width: fit-content;
+}
+
+#link-h {
+    color: white;
+    font-size: 50px;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.links-section .b-left h5 {
+    color: white;
+    font-family: Montserrat;
+    font-size: 25px;
+}
+
+.links-section .b-right{
+    margin-right: 20px;
+}
+
+.links-section .b-right ul {
+    list-style: none;
+}
+
+.links-section .b-right ul li{
+    list-style: none;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.links-section .b-right ul li a{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    font-family: Montserrat;
+    text-decoration: none;
 }
